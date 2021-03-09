@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.oshc.esps.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/home_fragment" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_food"
+            app:destination="@id/navigation_food" />
+        <action
+            android:id="@+id/action_navigation_home_to_policyFragment"
+            app:destination="@id/policyFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_generalInfoFragment"
+            app:destination="@id/generalInfoFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_usefulWebsitesFragment"
+            app:destination="@id/usefulWebsitesFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_menuPlanning"
+            app:destination="@id/menuPlanning" />
+        <action
+            android:id="@+id/action_navigation_home_to_activityFragment"
+            app:destination="@id/activityFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_food"
+        android:name="com.oshc.esps.ui.food.FoodFragment"
+        android:label="@string/title_recipes"
+        tools:layout="@layout/food_fragment" >
+        <action
+            android:id="@+id/action_navigation_food_to_foodRecipeFragment"
+            app:destination="@id/foodRecipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodRecipeFragment"
+        android:name="com.oshc.esps.ui.food.FoodRecipeFragment"
+        android:label="food_recipe_fragment"
+        tools:layout="@layout/food_recipe_fragment" />
+    <fragment
+        android:id="@+id/policyFragment"
+        android:name="com.oshc.esps.ui.policy.PolicyFragment"
+        android:label="PolicyFragment" />
+    <fragment
+        android:id="@+id/generalInfoFragment"
+        android:name="com.oshc.esps.ui.info.GeneralInfoFragment"
+        android:label="general_info_fragment"
+        tools:layout="@layout/general_info_fragment" />
+    <fragment
+        android:id="@+id/menuPlanning"
+        android:name="com.oshc.esps.ui.menu.MenuPlanningFragment"
+        android:label="menu_planning_fragment"
+        tools:layout="@layout/menu_planning_fragment" />
+    <fragment
+        android:id="@+id/usefulWebsitesFragment"
+        android:name="com.oshc.esps.ui.websites.UsefulWebsitesFragment"
+        android:label="useful_websites_fragment"
+        tools:layout="@layout/useful_websites_fragment" />
+    <fragment
+        android:id="@+id/activityFragment"
+        android:name="com.oshc.esps.ui.pa.ActivityFragment"
+        android:label="activity_fragment"
+        tools:layout="@layout/activity_fragment" >
+        <action
+            android:id="@+id/action_activityFragment_to_activityDetailsFragment"
+            app:destination="@id/activityDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/activityFragment2"
+        android:name="com.oshc.esps.ui.pa.ActivityFragment"
+        android:label="activity_fragment"
+        tools:layout="@layout/activity_fragment" />
+    <fragment
+        android:id="@+id/activityDetailsFragment"
+        android:name="com.oshc.esps.ui.pa.ActivityDetailsFragment"
+        android:label="ActivityDetailsFragment" />
+
+</navigation>
