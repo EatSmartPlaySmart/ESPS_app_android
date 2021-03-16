@@ -29,9 +29,11 @@ class PolicyViewModel : ViewModel() {
     fun toggleNutrtionPolicySelected() {
         Log.d("Policy", "${_isNutritionPolicySelected.value}")
         _isNutritionPolicySelected.value = !_isNutritionPolicySelected.value!!
+        _isActivityPolicySelected.value = false
     }
 
     fun toggleActivityPolicySelected() {
         _isActivityPolicySelected.value = !_isActivityPolicySelected.value!!
+        isNutritionPolicySelected.value = false
     }
 }

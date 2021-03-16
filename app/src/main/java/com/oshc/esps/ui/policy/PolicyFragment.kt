@@ -1,27 +1,17 @@
 package com.oshc.esps.ui.policy
 
-import android.app.ActionBar
-import android.app.Dialog
-import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.text.Html
-import android.text.Layout
 import android.view.LayoutInflater
-import android.view.ViewGroup.LayoutParams
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.text.HtmlCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.oshc.esps.MainActivity
 import com.oshc.esps.R
 import com.oshc.esps.databinding.PolicyFragmentBinding
 import kotlinx.android.synthetic.main.policy_fragment.*
@@ -58,11 +48,11 @@ class PolicyFragment : Fragment() {
 
         // setup preview policy buttons
         btnPolicyActivity.setOnClickListener {
-            showDialog("Activity Policy Preview", getPhysicalNutrion(viewModel.companyName.value!!))
+            showDialog("Activity Policy Preview", getPhysicalPolicy(viewModel.companyName.value!!))
         }
 
         btnPolicyNutrition.setOnClickListener {
-            showDialog("Nutrition Policy Preview", getPhysicalNutrion(viewModel.companyName.value!!))
+            showDialog("Nutrition Policy Preview", getPhysicalPolicy(viewModel.companyName.value!!))
         }
 
         // generate policy with company name and start email intent
@@ -97,11 +87,22 @@ class PolicyFragment : Fragment() {
         intent.putExtra(Intent.EXTRA_EMAIL, addresses)
         intent.putExtra(Intent.EXTRA_SUBJECT, subject)
         intent.putExtra(
-            Intent.EXTRA_TEXT, getPhysicalNutrion(viewModel.companyName.value!!)
+            Intent.EXTRA_TEXT,
+                getSelectedPolicyText()
         )
         if (activity?.packageManager?.let { intent.resolveActivity(it) } != null) {
             startActivity(intent)
         }
+    }
+
+    /**
+     * Returns the appropriate policy depending on what user selected
+     */
+    private fun getSelectedPolicyText(): String {
+        return if (viewModel.isActivityPolicySelected.value == true)
+                    getPhysicalPolicy(viewModel.companyName.value!!)
+                else
+                    getNutritionPolicy(viewModel.companyName.value!!)
     }
 
     private fun setupActionBar() {

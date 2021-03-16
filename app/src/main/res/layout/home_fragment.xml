@@ -36,13 +36,16 @@
                 android:layout_width="0dp"
                 android:layout_height="150dp"
                 android:layout_margin="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="8dp"
-                android:src="@drawable/img_girl_jump"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="48dp"
+                android:scaleX="-1"
+                android:scaleType="fitStart"
+                android:src="@drawable/ic_img_skip_nums"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -51,10 +54,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
                 android:text="Eat Smart\nPlay Smart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView6"
-                app:layout_constraintEnd_toStartOf="@+id/ivHomeLogo"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView6"
                 app:layout_constraintTop_toTopOf="@+id/imageView6" />
 
@@ -66,9 +71,9 @@
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="16dp"
                 android:src="@drawable/ic_logo"
-                app:tint="@color/color_secondary"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/color_secondary" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.appcompat.widget.Toolbar>
@@ -79,7 +84,6 @@
         android:layout_margin="16dp"
         android:columnCount="2"
         android:rowCount="3"
-        android:translationY="-40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
