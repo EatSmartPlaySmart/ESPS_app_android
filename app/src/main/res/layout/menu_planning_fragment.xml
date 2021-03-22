@@ -6,7 +6,6 @@
         <variable
             name="viewmodel"
             type="com.oshc.esps.ui.menu.MenuPlanningViewModel" />
-
         <import type="android.view.View"/>
     </data>
 
@@ -72,7 +71,7 @@
                     android:layout_marginEnd="8dp"
                     android:layout_marginRight="8dp"
                     android:text="Breakfast/Afternoon checklist"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
                     android:textColor="@color/color_primary"
                     app:layout_constraintBottom_toBottomOf="@+id/button3"
                     app:layout_constraintEnd_toStartOf="@+id/button3"
@@ -111,7 +110,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginLeft="16dp"
                     android:text="Additional Food Checklist"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
                     android:textColor="@color/color_primary"
                     app:layout_constraintBottom_toBottomOf="@+id/imageButton"
                     app:layout_constraintStart_toStartOf="parent"
@@ -132,61 +131,80 @@
                 </androidx.recyclerview.widget.RecyclerView>
 
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-
-                    android:id="@+id/cvFoodToAvoid"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="16dp"
+                    android:layout_margin="16dp"
+                    android:text="Food to avoid"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/color_primary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/recyclerViewInAddition" />
+
+                <ListView
+                    android:id="@+id/lvMenuPlanningNeverFood"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_marginBottom="16dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:visibility="@{viewmodel.foodAvoidVisible ? View.VISIBLE : View.GONE}"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/recyclerViewInAddition">
+                    app:layout_constraintTop_toBottomOf="@+id/textView16"
+                    tools:listitem="@layout/menu_planning_checklist_item" />
 
-                    <TextView
-                        android:id="@+id/textView16"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Food to avoid"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                        android:textColor="@color/color_primary"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                <ImageButton
+                    android:id="@+id/button4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:background="@null"
+                    android:onClick="@{() -> viewmodel.toggleFoodAvoidVisiblity()}"
+                    android:src="@{viewmodel.foodAvoidVisible ?  @drawable/ic_minimize_arrow : @drawable/ic_expand_arrow}"
+                    app:layout_constraintBottom_toBottomOf="@id/textView16"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/textView16" />
 
-                    <ListView
-                        android:id="@+id/lvMenuPlanningNeverFood"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginRight="8dp"
-                        android:visibility="@{viewmodel.foodAvoidVisible ? View.VISIBLE : View.GONE}"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView16"
-                        tools:listitem="@layout/menu_planning_checklist_item" />
+                <TextView
+                    android:id="@+id/tvSampleMenuPlanTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Sample menu plan"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/color_primary"
+                    android:layout_margin="16dp"
+                    app:layout_constraintTop_toBottomOf="@id/lvMenuPlanningNeverFood"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
 
-                    <ImageButton
-                        android:id="@+id/button4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:background="@null"
-                        android:onClick="@{() -> viewmodel.toggleFoodAvoidVisiblity()}"
-                        android:src="@{viewmodel.foodAvoidVisible ?  @drawable/ic_minimize_arrow : @drawable/ic_expand_arrow}"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                <ImageButton
+                    android:id="@+id/button5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:background="@null"
+                    android:onClick="@{() -> viewmodel.toggleSampleMenuVisibility()}"
+                    android:src="@{viewmodel.sampleMenuVisible ?  @drawable/ic_minimize_arrow : @drawable/ic_expand_arrow}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvSampleMenuPlanTitle"
+                    app:layout_constraintBottom_toBottomOf="@id/tvSampleMenuPlanTitle"
+                    android:layout_marginEnd="16dp" />
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:src="@drawable/img_sample_menu_plan"
+                    android:visibility="@{viewmodel.sampleMenuVisible ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvSampleMenuPlanTitle" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
 
@@ -200,7 +218,7 @@
             android:layout_marginBottom="24dp"
             android:scaleType="fitCenter"
             android:src="@drawable/img_home_menu_recipes"
-            android:visibility="@{viewmodel.foodAvoidVisible || viewmodel.inAdditionVisible || viewmodel.checklistVisible ? View.GONE : View.VISIBLE}"
+            android:visibility="@{viewmodel.foodAvoidVisible || viewmodel.inAdditionVisible || viewmodel.checklistVisible || viewmodel.sampleMenuVisible ? View.GONE : View.VISIBLE}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"

@@ -27,7 +27,7 @@ class ActivityViewModel : ViewModel() {
         activityList.value = listOf(
             Activity(ACTIVITY_TYPE.INDOOR_OUTDOOR,
                     "Circuit Training",
-                    listOf("Skippig ropes, hoops or balls, craft materials to make cue cards"),
+                    listOf("Skipping ropes, hoops or balls, craft materials to make cue cards"),
                     listOf("Set up training station in a circuit around the room. Put cue sings with each station with picture cures and word cues. For example, in four corners of the room have:\n• skipping\n" +
                             "• hoping on the spot on one leg\n" +
                             "• jumping up to touch a balloon suspended from the ceiling\n" +

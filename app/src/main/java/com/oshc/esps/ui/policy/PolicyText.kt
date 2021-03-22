@@ -120,7 +120,6 @@ fun getPhysicalPolicy(companyName: String): String {
             "Date for review:\n\n"
 }
 
-
 fun getNutritionPolicy(companyName: String): String {
     return "Sample Nutrition, Food Handling and Hygiene Policy\n\n" +
             "This sample policy meets the requirements of the National Quality Standards and is " +
@@ -245,4 +244,3 @@ fun getNutritionPolicy(companyName: String): String {
             "Approval Date:\n" +
             "Date for Review:\n"
 }
-

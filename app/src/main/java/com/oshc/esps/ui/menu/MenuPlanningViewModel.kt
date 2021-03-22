@@ -15,11 +15,13 @@ class MenuPlanningViewModel : ViewModel() {
     val checklistVisible = MutableLiveData<Boolean>()
     val inAdditionVisible = MutableLiveData<Boolean>()
     val foodAvoidVisible = MutableLiveData<Boolean>()
+    val sampleMenuVisible = MutableLiveData<Boolean>()
 
     init {
         checklistVisible.value = false
         inAdditionVisible.value = false
         foodAvoidVisible.value = false
+        sampleMenuVisible.value = false
 
         populateChecklistData()
         populateInAdditionData()
@@ -42,6 +44,10 @@ class MenuPlanningViewModel : ViewModel() {
 
     fun toggleFoodAvoidVisiblity() {
         foodAvoidVisible.value = !foodAvoidVisible.value!!
+    }
+
+    fun toggleSampleMenuVisibility() {
+        sampleMenuVisible.value = !sampleMenuVisible.value!!
     }
 
 
