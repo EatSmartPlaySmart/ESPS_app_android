@@ -19,6 +19,7 @@
 <!--    Override color of textappearance-->
     <style name="TextAppearance.Large" parent="TextAppearance.AppCompat.Large">
         <item name="android:textColor">#FD1C100B</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="ShapeAppearance.CardView" parent="ShapeAppearance.MaterialComponents.MediumComponent">

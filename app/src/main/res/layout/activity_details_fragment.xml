@@ -46,6 +46,8 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:text="@{viewmodel.getEquipmentsAsString(viewmodel.activity.equipments)}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="22sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textView17" />
@@ -88,7 +90,8 @@
                 android:layout_height="match_parent"
                 android:layout_margin="8dp"
                 android:text="@{activity.activities[0]}"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textSize="22sp" />
         </androidx.cardview.widget.CardView>
 
         <TextView
@@ -127,8 +130,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="8dp"
+                android:text="@{activity.activities.size() > 1 ? activity.activities[1] : activity.activities[0]}"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:text="@{activity.activities.size() > 1 ? activity.activities[1] : activity.activities[0]}" />
+                android:textSize="22sp" />
         </androidx.cardview.widget.CardView>
 
 

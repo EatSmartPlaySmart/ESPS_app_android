@@ -98,19 +98,18 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/bg_primary_gradient">
+                android:layout_height="match_parent">
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_margin="16dp"
                     android:src="@drawable/ic_recipe"
-                    app:tint="@color/color_secondary"
                     app:layout_constraintBottom_toTopOf="@+id/tvGrid1"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/color_secondary" />
 
                 <TextView
                     android:id="@+id/tvGrid1"
@@ -119,8 +118,8 @@
                     android:layout_margin="16dp"
                     android:minLines="2"
                     android:text="@string/fragment_title_recipes"
-                    android:textColor="@android:color/white"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -153,9 +152,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
-                    android:text="@string/fragment_title_menu_planning"
                     android:gravity="center"
+                    android:text="@string/fragment_title_menu_planning"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
