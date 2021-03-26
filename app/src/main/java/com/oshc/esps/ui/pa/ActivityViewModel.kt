@@ -28,21 +28,21 @@ class ActivityViewModel : ViewModel() {
             Activity(ACTIVITY_TYPE.INDOOR_OUTDOOR,
                     "Circuit Training",
                     listOf("Skipping ropes, hoops or balls, craft materials to make cue cards"),
-                    listOf("Set up training station in a circuit around the room. Put cue sings with each station with picture cures and word cues. For example, in four corners of the room have:\n• skipping\n" +
-                            "• hoping on the spot on one leg\n" +
-                            "• jumping up to touch a balloon suspended from the ceiling\n" +
-                            "• twirling a hoop around the waist\n" +
-                            "• Allow children to spend at least 60 seconds per station before instructing them to\n" +
+                    listOf("Set up training station in a circuit around the room. Put cue sings with each station with picture cures and word cues. For example, in four corners of the room have:\n\n• Skipping\n" +
+                            "\n• Hoping on the spot on one leg\n" +
+                            "\n• Jumping up to touch a balloon suspended from the ceiling\n" +
+                            "\n• Twirling a hoop around the waist\n" +
+                            "\n• Allow children to spend at least 60 seconds per station before instructing them to " +
                             "move on to the next station. You could have music playing during the circuit training.")),
             Activity(ACTIVITY_TYPE.INDOOR_OUTDOOR,
                 "Frisbee",
                     listOf("Frisbee or paper plate"),
                     listOf("Get the children to play with a paper plate!",
                            "Get children to throw a frisbee outside. Groups can practise their frisbee skills. Challenge children to try to:\n" +
-                                   "• count the number of times they can pass the frisbee to each other without it touching the ground\n" +
-                                   "• throw the longest distance\n" +
-                                   "• relay around a circle\n" +
-                                   "• throw frisbees through goal posts.")),
+                                   "\n• Count the number of times they can pass the frisbee to each other without it touching the ground\n" +
+                                   "\n• Throw the longest distance\n" +
+                                   "\n• Relay around a circle\n" +
+                                   "\n• Throw frisbees through goal posts.")),
             Activity(ACTIVITY_TYPE.INDOOR,
             "Dance Off",
             listOf("Space and music"),
@@ -55,7 +55,7 @@ class ActivityViewModel : ViewModel() {
             listOf("Frisbee"),
             listOf("Set up a frisbee golf course! Children can ‘hit off’ from a set point (the first tee) and " +
                     "count the number of turns taken to reach a pre-determined target (the first hole).\n" +
-                    "Encourage children to make their own scorecards as a craft activity and then they can " +
+                    "\nEncourage children to make their own scorecards as a craft activity and then they can " +
                     "play ‘9 holes’.")),
 
                 Activity(ACTIVITY_TYPE.INDOOR_OUTDOOR,
@@ -63,11 +63,11 @@ class ActivityViewModel : ViewModel() {
                         listOf("Not required!"),
                         listOf("Have children line up in the centre of a room (or outdoor area) and instruct them that the room (or outdoor area) is a ship. Tell them that left is the ship’s port and right is the ship’s starboard.\n\n" +
                                 "Directions given are:\n" +
-                                "• Port: group runs to the left\n" +
-                                "• Starboard: group runs to the right\n" +
-                                "• Captain coming: all stand and salute\n" +
-                                "• Scrub the deck: crouch and ‘wash the deck’\n" +
-                                "• Man overboard: all lie face down on the ground • Climb the rigging: all pretend to climb the ladder.\n\n" +
+                                "\n• Port: group runs to the left\n" +
+                                "\n• Starboard: group runs to the right\n" +
+                                "\n• Captain coming: all stand and salute\n" +
+                                "\n• Scrub the deck: crouch and ‘wash the deck’\n" +
+                                "\n• Man overboard: all lie face down on the ground • Climb the rigging: all pretend to climb the ladder.\n\n" +
                                 "If someone makes a mistake, they collect a card containing one of the letters P, L, A, N or K. If a child collects all five they have to ‘walk the plank’ before rejoining the group (make them power walk around the ‘ship’).")),
 
 

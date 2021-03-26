@@ -14,116 +14,106 @@
             type="com.oshc.esps.ui.pa.ActivityDetailsViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/frameLayout2"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.pa.ActivityFragment">
+        android:background="@color/color_bg">
 
-        <TextView
-            android:id="@+id/textView17"
-            android:layout_width="0dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/frameLayout2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:text="Equipments"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@color/color_primary"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_marginBottom="16dp"
+            android:background="@color/color_bg"
+            android:paddingBottom="24dp"
+            tools:context=".ui.pa.ActivityFragment">
 
-        <TextView
-            android:id="@+id/textView20"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:text="@{viewmodel.getEquipmentsAsString(viewmodel.activity.equipments)}"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textSize="22sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textView17" />
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="Equipments"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/color_primary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/textView21"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:text="Indoor"
-            android:visibility="@{viewmodel.isIndoorVisible()}"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@color/color_primary"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textView20" />
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@{viewmodel.getEquipmentsAsString(viewmodel.activity.equipments)}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView17" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardView5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            app:cardCornerRadius="8dp"
-            android:visibility="@{viewmodel.activity.type == ACTIVITY_TYPE.OUTDOOR ? View.GONE : View.VISIBLE}"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textView21">
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@{viewmodel.activity.type == ACTIVITY_TYPE.INDOOR_OUTDOOR &amp;&amp; viewmodel.activity.activities.size == 1 ? `Indoor or Outdoor Instructions` : `Indoor Instructions`}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/color_primary"
+                android:visibility="@{viewmodel.isIndoorVisible()}"
+                app:layout_constraintBottom_toTopOf="@+id/textView22"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView20"
+                app:layout_constraintVertical_chainStyle="packed" />
+
 
             <TextView
                 android:id="@+id/textView22"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="8dp"
+                android:layout_margin="16dp"
                 android:text="@{activity.activities[0]}"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textSize="22sp" />
-        </androidx.cardview.widget.CardView>
+                android:textSize="22sp"
+                android:visibility="@{viewmodel.activity.type == ACTIVITY_TYPE.OUTDOOR ? View.GONE : View.VISIBLE}"
+                app:layout_constraintBottom_toTopOf="@+id/textView23"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
-        <TextView
-            android:id="@+id/textView23"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:text="Outdoor"
-            android:visibility="@{viewmodel.isOutdoorVisible()}"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@color/color_primary"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardView5" />
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="Outdoor Instructions"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/color_primary"
+                android:visibility="@{viewmodel.isOutdoorVisible()}"
+                app:layout_constraintBottom_toTopOf="@+id/textView25"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView22" />
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            app:cardCornerRadius="8dp"
-            android:visibility="@{viewmodel.isOutdoorVisible()}"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView23">
 
             <TextView
                 android:id="@+id/textView25"
@@ -132,10 +122,15 @@
                 android:layout_margin="8dp"
                 android:text="@{activity.activities.size() > 1 ? activity.activities[1] : activity.activities[0]}"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textSize="22sp" />
-        </androidx.cardview.widget.CardView>
+                android:textSize="22sp"
+                android:visibility="@{viewmodel.isOutdoorVisible()}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView23" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 </layout>

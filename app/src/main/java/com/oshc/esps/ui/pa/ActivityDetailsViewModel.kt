@@ -29,11 +29,10 @@ class ActivityDetailsViewModel : ViewModel() {
      */
     fun isIndoorVisible(): Int {
         activity.value?.let {
-            if ( (it.type == ACTIVITY_TYPE.OUTDOOR) ||
-                (it.type == ACTIVITY_TYPE.INDOOR_OUTDOOR  && it.activities.size == 1))
-                    return View.GONE
+            return if (it.type == ACTIVITY_TYPE.OUTDOOR)
+                View.GONE
             else
-                return View.VISIBLE
+                View.VISIBLE
 
         }
         return View.GONE
