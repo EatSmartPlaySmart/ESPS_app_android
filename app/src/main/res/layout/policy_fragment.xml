@@ -75,7 +75,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
-                android:text="Select the policy you would like for us to generate"
+                android:text="Select the policy you would like for us to generate for your OSHC"
                 android:textAppearance="@style/TextAppearance.Large"
                 android:textColor="@color/color_primary"
                 app:layout_constraintEnd_toEndOf="parent"

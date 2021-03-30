@@ -52,7 +52,7 @@ class PolicyFragment : Fragment() {
         }
 
         btnPolicyNutrition.setOnClickListener {
-            showDialog("Nutrition Policy Preview", getPhysicalPolicy(viewModel.companyName.value!!))
+            showDialog("Nutrition Policy Preview", getNutritionPolicy(viewModel.companyName.value!!))
         }
 
         // generate policy with company name and start email intent
