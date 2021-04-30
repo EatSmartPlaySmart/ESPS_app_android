@@ -74,7 +74,8 @@ class MenuPlanningViewModel : ViewModel() {
     private fun populateChecklistData() {
         checklistData.value = listOf(
                 CheckListData("A Cereal Based Food", "Breakfast cereals (less than 15 g/100 g of sugar or less than 25 g/100 g of sugar if they contian dried fruit), breads, fruit bread, plain cracker biscuits, rice cakes and rice crackers , corn thins, muffins, fruit buns, crumpets, pikelets, pasta, rice, noodles and couscous.\nNote: Choose wholemeal/wholegrain varieties"),
-                CheckListData("A Fruit or Vegetable", "Fresh, frozen, canned fruit (canned in unsweetened juice not syrup) or dried fruit, but not juice.\nRaw or cooked begetables including salad begetables, fresh, canned or frozen vegetables."),
+                CheckListData("A Fruit", "Fresh, frozen, canned fruit (canned in unsweetened juice not syrup) or dried fruit, but not juice"),
+                CheckListData("A Vegetable", "Raw or cooked vegetables including salad vegetables, fresh, canned or frozen vegetables."),
                 CheckListData("Milk, Yoghurt, Cheese", "Reduced fat milks, cheese, cheese spread, yoghurt and milk alternatives (e.g. soy) with added calcium (100 mg/100 ml).\nNOte: Cream cheese, cream, sour cream and butter are not high sources of calcium."),
                 CheckListData("Lean Meat, Poultry, Fish, Eggs, Tofu and Legumes", "Beef, lamb, kangaroo, pork, fish (e.g tuna), chicken, eggs, tofu, legumes (e.g. baked beans, chick peas, lentils)"),
                 CheckListData("Water as a Drink", "Always serve water as a drink. Reduced fat milk is also a good choice.")

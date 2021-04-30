@@ -33,11 +33,10 @@ class FoodRecipeFragment : Fragment() {
         return binding.root
     }
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         (activity as AppCompatActivity).supportActionBar?.hide()
-        toolbarFoodRecipe.setNavigationIcon(R.drawable.ic_back);
+        toolbarFoodRecipe.setNavigationIcon(R.drawable.ic_back)
         toolbarFoodRecipe.setNavigationOnClickListener {
             activity?.onBackPressed()
         }
@@ -47,9 +46,7 @@ class FoodRecipeFragment : Fragment() {
             viewModel.setFoodRecipe(it)
         }
 
-        val resource = context?.resources?.getIdentifier(viewModel.foodRecipe.value?.img,
-            "drawable", context?.packageName)
+        val resource = context?.resources?.getIdentifier(viewModel.foodRecipe.value?.img, "drawable", context?.packageName)
         resource?.let { ivFoodRecipe.setImageResource(it) }
     }
-
 }
