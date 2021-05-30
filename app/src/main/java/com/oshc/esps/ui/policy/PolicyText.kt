@@ -1,5 +1,9 @@
 package com.oshc.esps.ui.policy
 
+fun getPolicyBenefits(): String {
+    return "The following information is provided to assist OSHC services to develop their own nutrition and physical activity policies. Tailor the information in the sample policies provided below to your OSHC service. Delete sections that are not relevant to your type of service and add additional points that reflect your practice. Involve educators and families in the policy development. Review the process and ensure that the final policy is on display and accessible to all educators and families."
+}
+
 fun getPhysicalPolicy(companyName: String): String {
     return "Physical Activity and Small Screen Recreation Policy\n\n" +
             "This sample policy meets the requirements of the National Quality Standards and is " +

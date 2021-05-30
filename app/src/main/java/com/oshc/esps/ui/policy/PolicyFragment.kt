@@ -46,6 +46,12 @@ class PolicyFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setupActionBar()
 
+        // show benefits of policies dialog
+        if (viewModel.showBenefitsDialog.value == true) {
+            showDialog("Benefits of Policies", getPolicyBenefits())
+            viewModel.showBenefitsDialog.value = false
+        }
+
         // setup preview policy buttons
         btnPolicyActivity.setOnClickListener {
             showDialog("Activity Policy Preview", getPhysicalPolicy(viewModel.companyName.value!!))

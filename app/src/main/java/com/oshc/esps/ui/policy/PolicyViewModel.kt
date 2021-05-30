@@ -10,11 +10,14 @@ class PolicyViewModel : ViewModel() {
     private var _isActivityPolicySelected = MutableLiveData<Boolean>()
     var companyName = MutableLiveData<String>()
     var email = MutableLiveData<String>()
+    var showBenefitsDialog = MutableLiveData<Boolean>()
+
     init {
         _isNutritionPolicySelected.value = false
         _isActivityPolicySelected.value = false
         companyName.value = "YourCompany"
         email.value = ""
+        showBenefitsDialog.value = true
     }
 
     val isNutritionPolicySelected

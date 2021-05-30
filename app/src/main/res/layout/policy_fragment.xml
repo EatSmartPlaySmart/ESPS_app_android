@@ -193,7 +193,7 @@
                         android:id="@+id/textView10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Activity Policy"
+                        android:text="Physical Activity Policy"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />

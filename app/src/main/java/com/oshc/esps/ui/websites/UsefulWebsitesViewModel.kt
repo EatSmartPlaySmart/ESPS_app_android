@@ -17,6 +17,7 @@ class UsefulWebsitesViewModel : ViewModel() {
 
     private fun populateWebsitelist() {
         websiteList.value = listOf(
+                Website("Eat Smart Play Smart Manual", "Read more about Eat Smart Play Smart", "https://www.healthykids.nsw.gov.au/downloads/file/teacherschildcare/EatSmartPlaySmart_Manual_ThirdEdition-V7.pdf"),
                 Website("Heart Foundation", "Healthy eating information", "http://heartfoundation.org.au/healthy-eating"),
                 Website("Heart Foundation", "Physical Activity Information", "http://heartfoundation.org.au/active-living"),
                 Website("Heart Foundation", "Jump Rope for Heart", "http://heartfoundation.org.au/jump-rope-for-heart-outreach-program"),
@@ -28,7 +29,7 @@ class UsefulWebsitesViewModel : ViewModel() {
                 Website("A Healthy and Active Australia", "This website provides a range of information and initiatives on healthy eating and regular\n" +
                         "physical activity to assist all Australians to lead healthy and active lives.", "http://www.healthyactive.gov.au"),
                 Website("Make Healthy Normal", "NSW Health website encouraging healthy eating and physical activity to encourage\n" +
-                        "lifestyle changes.", "https://www.makehealthynormal.nsw.gov.au"),
+                        "lifestyle changes.", "https://www.healthyliving.nsw.gov.au/"),
                 Website("The Premier’s Sporting Challenge", "The Premier’s Sporting Challenge is a NSW Government initiative facilitated by the NSW " +
                         "Department of Education that aims to engage young people in sport and physical activity " +
                         "and encourage them to lead healthy, active lifestyles. The Challenge includes a range of " +
