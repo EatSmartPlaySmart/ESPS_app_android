@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "723977705158",
+    "project_id": "esps-app",
+    "storage_bucket": "esps-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:723977705158:android:e8522fb0d73eac805de9c7",
+        "android_client_info": {
+          "package_name": "com.oshc.esps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "723977705158-uc7gl7edc48otou6rdv76qq1ea1t5cln.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBT-pMfT8CXqPNcnc5iMWlTf_EyS1lY54U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "723977705158-uc7gl7edc48otou6rdv76qq1ea1t5cln.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "723977705158-5u4aef72a4g8dmds65i3s7ikbs2cainp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "earlystart.ESPS"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
