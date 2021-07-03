@@ -21,9 +21,6 @@ class HomeFragment : Fragment() {
             savedInstanceState: Bundle?
     ): View? {
 
-        // Hide actionbar for this fragment
-
-        (activity as AppCompatActivity).supportActionBar?.hide()
 
         homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
         val root = inflater.inflate(R.layout.home_fragment, container, false)
@@ -34,7 +31,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
+        (activity as AppCompatActivity).supportActionBar?.hide()
 
         handleGridSelection()
     }
